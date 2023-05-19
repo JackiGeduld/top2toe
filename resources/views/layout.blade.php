@@ -88,6 +88,17 @@ a{
 .header-branding{
 	margin-bottom: 109px;
 }
+.lsvr-feature__icon {
+    color: var(--secondary-color);
+}
+
+input, select, textarea {
+  border-radius: 10px;
+}
+.service-post-archive .post__icon {
+
+    background-color: var(--secondary-color);
+}
 </style>
 @yield('styles')
 	</head>
@@ -136,7 +147,7 @@ a{
 
 								<!-- HEADER LOGO : begin -->
 								<div class="header-logo">
-									<a href="index.html" class="header-logo__link">
+									<a href="/" class="header-logo__link">
 										<img src="{{ asset('assets/images/mainlogo.png') }}" class="header-logo__image" alt="Logo" width="200px">
 									</a>
 								</div>
@@ -146,7 +157,7 @@ a{
 								<div class="header-title-tagline">
 
 									<div class="header-title">
-										<a href="index.html" class="header-title__link">Hair Salon</a>
+										<a href="/" class="header-title__link">Hair Salon</a>
 									</div>
 
 									<p class="header-tagline">
@@ -169,7 +180,7 @@ a{
 								<li class="header-menu__item header-menu__item--current header-menu__item--has-children">
 
 									<span class="header-menu__item-link-wrapper">
-										<a href="index.html" class="header-menu__item-link">Home</a>
+										<a href="/" class="header-menu__item-link">Home</a>
 									</span>
 
 									<button type="button" class="header-menu__submenu-toggle" title="Expand submenu">
@@ -379,7 +390,7 @@ a{
 													<!-- CONTACT ITEM : begin -->
 													<li class="header-contact__item header-contact__item--has-icon">
 														<span class="header-contact__item-icon icon-phone" aria-hidden="true"></span>
-														<a href="tel:12346789">(123) 456 789</a>
+														<a href="tel:+27219138243">+27 21 913 8243</a>
 													</li>
 													<!-- CONTACT ITEM : end -->
 
@@ -530,12 +541,11 @@ a{
 										<div class="widget lsvr-text-widget">
 											<div class="widget__inner">
 
-												<h3 class="widget__title">About BeautySpot</h3>
+												<h3 class="widget__title">About  Top<span style="color: var(--secondary-color);">2</span>Toe</h3>
 												<div class="widget__content">
 
-													<p>BeautySpot is an ideal HTML template for beauty salons, hairdressers, wellness or spa websites.
-													Clean and fast code is wrapped in unique design.</p>
-													<p>You can buy this HTML template on <a href="https://themeforest.net/item/beautyspot-html-template-for-beauty-salons/7734629" target="_blank">ThemeForest</a>.</p>
+													<p>We are a Unisex Hair salon. We do ladies, gents, boys and girls hair. We retail Schwartzkopf hair p</p>
+
 
 												</div>
 
@@ -559,19 +569,19 @@ a{
 													<div class="lsvr-images-widget__grid lsvr-grid lsvr-grid--4-cols lsvr-grid--sm-2-cols">
 
 														<div class="lsvr-grid__col">
-															<p><img src="images/brand_01.png" alt="Brand 1"></p>
+															<p><img src="{{ asset('assets/images/brand_01.png') }}" alt="Brand 1"></p>
 														</div>
 
 														<div class="lsvr-grid__col">
-															<p><img src="images/brand_02.png" alt="Brand 2"></p>
+															<p><img src="{{ asset('assets/images/brand_02.png') }}" alt="Brand 2"></p>
 														</div>
 
 														<div class="lsvr-grid__col">
-															<p><img src="images/brand_03.png" alt="Brand 3"></p>
+															<p><img src="{{ asset('assets/images/brand_03.png') }}" alt="Brand 3"></p>
 														</div>
 
 														<div class="lsvr-grid__col">
-															<p><img src="images/brand_04.png" alt="Brand 4"></p>
+															<p><img src="{{ asset('assets/images/brand_04.png') }}" alt="Brand 4"></p>
 														</div>
 
 													</div>
@@ -593,7 +603,7 @@ a{
 					</div>
 					<!-- FOOTER WIDGETS : end -->
 
-			
+
 		</div>
 		<!-- WRAPPER : end -->
 

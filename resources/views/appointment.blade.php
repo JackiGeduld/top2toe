@@ -2,22 +2,21 @@
 @section('title', ' Contact | Top2Toe - Unisex Salon')
 @section('content')
 @section('styles')
-    <style>
-    #contact-reservation-date{
-      padding: 11px 30px 11px 20px;!important;
-    }
-    span.wpcf7-list-item {
-    margin: 0 15px 0 0;
-}
-
-.wpcf7-list-item {
-    display: inline-block;
-    margin: 0 0 0 1em;
-}
-.wpcf7-list-item input {
-    margin-right: 5px;
-}
-    </style>
+<style>
+   #contact-reservation-date{
+   padding: 11px 30px 11px 20px;!important;
+   }
+   span.wpcf7-list-item {
+   margin: 0 15px 0 0;
+   }
+   .wpcf7-list-item {
+   display: inline-block;
+   margin: 0 0 0 1em;
+   }
+   .wpcf7-list-item input {
+   margin-right: 5px;
+   }
+</style>
 @endsection
 <div id="core" class="core--narrow">
    <div class="core__inner">
@@ -43,7 +42,7 @@
                      <div class="page contact-page">
                         <div class="page__content">
                            <!-- MAP : begin -->
-                           <iframe src="https://maps.google.com/maps?q=34.090866,-118.388228&amp;z=15&amp;output=embed" class="google-map"></iframe>
+                           <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.6112484046976!2d18.61681167652844!3d-33.87390831932478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc50a7b6d90ec1%3A0xc1b1a99612a7cf04!2sTop2Toe%20Unisex%20Hairsalon!5e0!3m2!1sen!2sza!4v1684533010645!5m2!1sen!2sza"  style="border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                            <!-- MAP : begin -->
                            <!-- LSVR SPACER : begin -->
                            <hr class="lsvr-spacer" aria-hidden="true">
@@ -174,10 +173,6 @@
                               </div>
                               <!-- GRID : end -->
                               <!-- GRID : begin -->
-
-
-
-
                               <!-- GRID : end -->
                               <!-- GRID : begin -->
                               <div class="lsvr-grid lsvr-grid--2-cols lsvr-grid--sm-1-cols">
@@ -186,7 +181,7 @@
                                     <p>
                                        <label for="contact-reservation-date">Preferred Date</label>
                                        <span class="wpcf7-form-control-wrap" data-name="contact-reservation-date">
-                                         <input type="date" name="contact-reservation-date" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date" id="contact-reservation-date" aria-invalid="false" />
+                                       <input type="date" name="contact-reservation-date" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date" id="contact-reservation-date" aria-invalid="false" />
                                        </span>
                                     </p>
                                  </div>
@@ -218,8 +213,8 @@
                               </div>
                               <!-- GRID : end -->
                               <p>
-<label for="contact-services">What Services Are You Interested In</label><span class="wpcf7-form-control-wrap" data-name="contact-services"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first"><label><input type="checkbox" name="contact-services[]" value="Facials"><span class="wpcf7-list-item-label">Facials</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Eyebrow &amp; Eyelashes"><span class="wpcf7-list-item-label">Eyebrow &amp; Eyelashes</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Wash"><span class="wpcf7-list-item-label">Wash</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Cut &amp; Finish"><span class="wpcf7-list-item-label">Cut &amp; Finish</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Blow Dries"><span class="wpcf7-list-item-label">Blow Dries</span></label></span><span class="wpcf7-list-item last"><label><input type="checkbox" name="contact-services[]" value="Hair Colouring"><span class="wpcf7-list-item-label">Hair Colouring</span></label></span></span></span>
-</p>
+                                 <label for="contact-services">What Services Are You Interested In</label><span class="wpcf7-form-control-wrap" data-name="contact-services"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first"><label><input type="checkbox" name="contact-services[]" value="Facials"><span class="wpcf7-list-item-label">Facials</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Eyebrow &amp; Eyelashes"><span class="wpcf7-list-item-label">Eyebrow &amp; Eyelashes</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Wash"><span class="wpcf7-list-item-label">Wash</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Cut &amp; Finish"><span class="wpcf7-list-item-label">Cut &amp; Finish</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Blow Dries"><span class="wpcf7-list-item-label">Blow Dries</span></label></span><span class="wpcf7-list-item last"><label><input type="checkbox" name="contact-services[]" value="Hair Colouring"><span class="wpcf7-list-item-label">Hair Colouring</span></label></span></span></span>
+                              </p>
                               <!-- FORM MESSAGE : begin -->
                               <p class="lsvr-form__field">
                                  <label class="lsvr-form__field-label" for="contact-message">Message*</label>

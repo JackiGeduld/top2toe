@@ -614,7 +614,7 @@
 
                                                           <p class="lsvr-testimonials__post-thumbnail">
                                                             <a href="testimonial-single.html" class="lsvr-testimonials__post-thumbnail-link">
-                                                                            <img src="images/client_01.jpg" class="lsvr-testimonials__post-thumbnail-img" alt="Sandra Olson">
+                                                                            <img src="{{ asset('assets/images/client_01.jpg') }}" class="lsvr-testimonials__post-thumbnail-img" alt="Sandra Olson">
                                                                           </a>
                                                                         </p>
 
@@ -649,7 +649,7 @@
 
                                                           <p class="lsvr-testimonials__post-thumbnail">
                                                             <a href="testimonial-single.html" class="lsvr-testimonials__post-thumbnail-link">
-                                                                            <img src="images/client_02.jpg" class="lsvr-testimonials__post-thumbnail-img" alt="Donna Kittrell">
+                                                                            <img src="{{ asset('assets/images/client_02.jpg') }}" class="lsvr-testimonials__post-thumbnail-img" alt="Donna Kittrell">
                                                                           </a>
                                                                         </p>
 
@@ -684,7 +684,7 @@
 
                                                           <p class="lsvr-testimonials__post-thumbnail">
                                                             <a href="testimonial-single.html" class="lsvr-testimonials__post-thumbnail-link">
-                                                                            <img src="images/client_03.jpg" class="lsvr-testimonials__post-thumbnail-img" alt="Angela Chambers">
+                                                                            <img src="{{ asset('assets/images/client_03.jpg') }}" class="lsvr-testimonials__post-thumbnail-img" alt="Angela Chambers">
                                                                           </a>
                                                                         </p>
 
@@ -719,7 +719,7 @@
 
                                                           <p class="lsvr-testimonials__post-thumbnail">
                                                             <a href="testimonial-single.html" class="lsvr-testimonials__post-thumbnail-link">
-                                                                            <img src="images/client_04.jpg" class="lsvr-testimonials__post-thumbnail-img" alt="Thomas Wadsworth">
+                                                                            <img src="{{ asset('assets/images/client_03.jpg') }}" class="lsvr-testimonials__post-thumbnail-img" alt="Thomas Wadsworth">
                                                                           </a>
                                                                         </p>
 
@@ -749,27 +749,6 @@
                 </section>
                 <!-- LSVR TESTIMONIALS : end -->
 
-                <!-- LSVR CTA : begin -->
-                <section class="lsvr-cta lsvr-cta--has-button">
-                    <div class="lsvr-cta__inner">
-                        <div class="lsvr-container">
-                            <div class="lsvr-cta__content">
-
-                              <h3 class="lsvr-cta__title">BeautySpot HTML Template</h3>
-
-                              <div class="lsvr-cta__text">
-                                <p>A perfect HTML template for your beauty salon website!</p>
-                                  </div>
-
-                                  <p class="lsvr-cta__button">
-                                      <a href="https://themeforest.net/item/beautyspot-html-template-for-beauty-salons/7734629" class="lsvr-cta__button-link lsvr-button" target="_blank">Purchase BeautySpot</a>
-                                    </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- LSVR CTA : end -->
 
               </div>
             </div>
