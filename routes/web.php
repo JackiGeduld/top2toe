@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AppointmentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/services', [ServiceController::class, 'index'])->name('services');
+
+
+Route::get('/appointment', [AppointmentController::class, 'showAppointmentForm'])->name('appointment.form');
+Route::post('/appointment', [AppointmentController::class, 'submitAppointmentForm'])->name('appointment.submit');
+Route::get('/appointment/success', [AppointmentController::class, 'showSuccessPage'])->name('appointment.success');

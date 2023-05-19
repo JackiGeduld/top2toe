@@ -17,7 +17,7 @@
 <style>
 
 :root {
-  --primary-color: #303030;   /* Replace with your primary color value */
+  --primary-color: #3d3d3d;   /* Replace with your primary color value */
   --secondary-color: #D82028; /* Replace with your secondary color value */
 }
 #header {
@@ -63,6 +63,27 @@ a{
 
 .header-logo {
     max-width: 100%;
+}
+
+.lsvr-services__post-description {
+    border-radius: 10px;
+}
+.lsvr-services__item--has-thumbnail .lsvr-services__post-inner {
+  border-radius: 10px;
+}
+
+.lsvr-services__post-bg {
+    border-radius: 10px;
+}
+.lsvr-slide-list__item-content-inner {
+  border-top-right-radius: 10px;
+
+}
+.header-cta__button:hover {
+    box-shadow: 0 0 0 1px var(--secondary-color);
+}
+.header-branding{
+	margin-bottom: 109px;
 }
 </style>
 	</head>
@@ -121,11 +142,11 @@ a{
 								<div class="header-title-tagline">
 
 									<div class="header-title">
-										<a href="index.html" class="header-title__link">BeautySpot</a>
+										<a href="index.html" class="header-title__link">Hair Salon</a>
 									</div>
 
 									<p class="header-tagline">
-										HTML Template for Beauty Salons
+										Together We Stand Up Again
 									</p>
 
 								</div>
@@ -170,7 +191,7 @@ a{
 								<li class="header-menu__item">
 
 									<span class="header-menu__item-link-wrapper">
-										<a href="service-archive.html" class="header-menu__item-link">Our Services</a>
+										<a href="{{route('services')}}" class="header-menu__item-link">Our Services</a>
 									</span>
 
 								</li>
@@ -341,7 +362,7 @@ a{
 
 										<!-- HEADER CTA : begin -->
 										<div class="header-cta">
-											<a href="contact.html" class="header-cta__button">Make An Appointment</a>
+											<a href="{{route('appointment.form')}}" class="header-cta__button">Make An Appointment</a>
 										</div>
 										<!-- HEADER CTA : end -->
 
@@ -512,16 +533,16 @@ a{
 						                                						<div class="lsvr-container">
 						                               								<div class="lsvr-slide-list__item-content-inner">
 
-						                                                            	<h2 class="lsvr-slide-list__item-title">Welcome to BeautySpot</h2>
+						                                                            	<h2 class="lsvr-slide-list__item-title">Welcome to Top2Toe</h2>
 
 						                                                            	<div class="lsvr-slide-list__item-text">
 						                                                            		<p>
-						                                                            			HTML Template for Beauty Salons, Hairdressers, Wellness or Spa
+						                                                            		We are a Unisex Hair salon. We do ladies, gents, boys and girls hair.
 						                                                            		</p>
 						                                                            	</div>
 
 							                                                            <p class="lsvr-slide-list__item-button">
-							                                                                <a href="service-archive.html" class="lsvr-button lsvr-slide-list__item-button-link">See Our Services</a>
+							                                                                <a href="{{route('services')}}" class="lsvr-button lsvr-slide-list__item-button-link">See Our Services</a>
 							                                                            </p>
 
 						                                                    		</div>
@@ -909,7 +930,7 @@ a{
 						                    									<!-- POST ITEM THUMB : begin -->
 									                                            <p class="lsvr-posts__post-thumbnail">
 									                                                <a href="blog-single.html" class="lsvr-posts__post-thumbnail-link">
-									                                                    <img src="images/blog_01.jpg" class="lsvr-posts__post-thumbnail-img" alt="A spa is a location where mineral-rich spring water">
+									                                                    <img src="{{ asset('assets/images/blog_01.jpg') }}" class="lsvr-posts__post-thumbnail-img" alt="A spa is a location where mineral-rich spring water">
 									                                                </a>
 									                                            </p>
 									                                            <!-- POST ITEM THUMB : end -->
@@ -961,7 +982,7 @@ a{
 						                    									<!-- POST ITEM THUMB : begin -->
 									                                            <p class="lsvr-posts__post-thumbnail">
 									                                                <a href="blog-single.html" class="lsvr-posts__post-thumbnail-link">
-									                                                    <img src="images/blog_02.jpg" class="lsvr-posts__post-thumbnail-img" alt="The main professionals that provide therapeutic">
+									                                                    <img src="{{ asset('assets/images/blog_02.jpg') }}" class="lsvr-posts__post-thumbnail-img" alt="The main professionals that provide therapeutic">
 									                                                </a>
 									                                            </p>
 									                                            <!-- POST ITEM THUMB : end -->
@@ -1005,7 +1026,7 @@ a{
 						                    									<!-- POST ITEM THUMB : begin -->
 									                                            <p class="lsvr-posts__post-thumbnail">
 									                                                <a href="blog-single.html" class="lsvr-posts__post-thumbnail-link">
-									                                                    <img src="images/blog_03.jpg" class="lsvr-posts__post-thumbnail-img" alt="The dyeing of hair is an ancient art that involves">
+									                                                    <img src="{{ asset('assets/images/blog_03.jpg') }}" class="lsvr-posts__post-thumbnail-img" alt="The dyeing of hair is an ancient art that involves">
 									                                                </a>
 									                                            </p>
 									                                            <!-- POST ITEM THUMB : end -->
@@ -1383,7 +1404,7 @@ a{
 								<!-- FOOTER TEXT : begin -->
 								<div class="footer-text">
 									<p>
-										<a href="https://themeforest.net/item/beautyspot-html-template-for-beauty-salons/7734629" target="_blank">BeautySpot</a> - HTML Template for Beauty Salons
+										<a href="https://themeforest.net/item/beautyspot-html-template-for-beauty-salons/7734629" target="_blank">BeautySpot</a> -Together We Stand Up Again
 									</p>
 								</div>
 								<!-- FOOTER TEXT : end -->
