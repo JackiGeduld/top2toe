@@ -81,4 +81,14 @@ class ServiceController extends Controller
     {
         //
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function service_individual($slug)
+    {
+        return view('services_individual');
+    }
 }

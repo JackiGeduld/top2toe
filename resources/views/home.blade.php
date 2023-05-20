@@ -34,7 +34,7 @@
                                                   <div class="lsvr-container">
                                                     <div class="lsvr-slide-list__item-content-inner">
 
-                                                                    <h2 class="lsvr-slide-list__item-title">Welcome to Top2Toe</h2>
+                                                                    <h2 class="lsvr-slide-list__item-title">Welcome to Top<span style="color: var(--secondary-color);">2</span>Toe</h2>
 
                                                                     <div class="lsvr-slide-list__item-text">
                                                                       <p>
@@ -64,11 +64,12 @@
                                                   <div class="lsvr-container">
                                                     <div class="lsvr-slide-list__item-content-inner">
 
-                                                                    <h2 class="lsvr-slide-list__item-title">Read Professional Beauty Tips</h2>
+                                                                    <h2 class="lsvr-slide-list__item-title">15% of All Nail Treatments</h2>
 
                                                                     <div class="lsvr-slide-list__item-text">
                                                                       <p>
-                                                                        Get inspired by our beauty tips on cosmetics, hair and body treatments
+                                                                        August Promotion<br>
+                                                                        Valid Until 15th August
                                                                       </p>
                                                                     </div>
 
@@ -172,7 +173,7 @@
                                                                   <span class="lsvr-services__post-icon icon-powder-brush" aria-hidden="true"></span>
 
                                                                   <h3 class="lsvr-services__post-title">
-                                                                    <a href="service-single.html" class="lsvr-services__post-title-link">Cosmetics</a>
+                                                                    <a href="{{ route('services_individual', ['slug' => 'cosmetics']) }}" class="lsvr-services__post-title-link">Cosmetics</a>
                                                                 </h3>
 
                                                                 </div>

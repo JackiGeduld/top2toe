@@ -709,107 +709,106 @@ $(document).ready( function() {
 		LSVR SLIDE LIST
 	------------------------------------------------------------------------- */
 
-	$( '.lsvr-slide-list' ).each(function() {
+  $('.lsvr-slide-list').each(function() {
 
-		var $this = $(this),
-			$slides = $this.find( '.lsvr-slide-list__item' ),
-			$active = $slides.first(),
-			autoplay = $this.attr( 'data-autoplay' ) ? parseInt( $this.attr( 'data-autoplay' ) ) : 0,
-			$prevBtn = $this.find( '.lsvr-slide-list__nav-button--prev' ),
-			$nextBtn = $this.find( '.lsvr-slide-list__nav-button--next' ),
-			$next;
+      var $this = $(this),
+          $slides = $this.find('.lsvr-slide-list__item'),
+          $active = $slides.first(),
+          autoplay = $this.attr('data-autoplay') ? parseInt($this.attr('data-autoplay')) : 5,
+          $prevBtn = $this.find('.lsvr-slide-list__nav-button--prev'),
+          $nextBtn = $this.find('.lsvr-slide-list__nav-button--next'),
+          $next;
 
-		// Set default active
-		$active.addClass( 'lsvr-slide-list__item--active' );
+      // Set default active
+      $active.addClass('lsvr-slide-list__item--active');
 
-		// Slide
-		function slide( direction ) {
+      // Slide
+      function slide(direction) {
 
-			var slideDelay = $.fn.lsvrBeautyspotGetMediaQueryBreakpoint() > 768 ? 1000 : 0;
+          var slideDelay = $.fn.lsvrBeautyspotGetMediaQueryBreakpoint() > 768 ? 2000 : 0;
 
-			$this.addClass( 'lsvr-slide-list--animation-in-progress' );
+          $this.addClass('lsvr-slide-list--animation-in-progress');
 
-			// Previous
-			if ( 'prev' === direction ) {
+          // Previous
+          if ('prev' === direction) {
 
-				if ( $active.prev().length > 0 ) {
-					$next = $active.prev();
-				} else {
-					$next = $slides.last();
-				}
+              if ($active.prev().length > 0) {
+                  $next = $active.prev();
+              } else {
+                  $next = $slides.last();
+              }
 
-			}
+          }
 
-			// Next
-			else {
+          // Next
+          else {
 
-				if ( $active.next().length > 0 ) {
-					$next = $active.next();
-				} else {
-					$next = $slides.first();
-				}
+              if ($active.next().length > 0) {
+                  $next = $active.next();
+              } else {
+                  $next = $slides.first();
+              }
 
-			}
+          }
 
-			// Start animation
-			$next.addClass( 'lsvr-slide-list__item--next lsvr-slide-list__item--animate-in' );
-			$active.addClass( 'lsvr-slide-list__item--animate-out' );
+          // Start animation
+          $next.addClass('lsvr-slide-list__item--next lsvr-slide-list__item--animate-in');
+          $active.addClass('lsvr-slide-list__item--animate-out');
 
-			// Reset after animation ends
-			setTimeout( function() {
+          // Reset after animation ends
+          setTimeout(function() {
 
-				$next.removeClass( 'lsvr-slide-list__item--next lsvr-slide-list__item--animate-in' );
-				$next.addClass( 'lsvr-slide-list__item--active' );
-				$active.removeClass( 'lsvr-slide-list__item--active lsvr-slide-list__item--animate-out' );
-				$active = $next;
-				$this.removeClass( 'lsvr-slide-list--animation-in-progress' );
+              $next.removeClass('lsvr-slide-list__item--next lsvr-slide-list__item--animate-in');
+              $next.addClass('lsvr-slide-list__item--active');
+              $active.removeClass('lsvr-slide-list__item--active lsvr-slide-list__item--animate-out');
+              $active = $next;
+              $this.removeClass('lsvr-slide-list--animation-in-progress');
 
-			}, slideDelay );
+          }, slideDelay);
 
-		}
+      }
 
-		// Click on next
-		$nextBtn.on( 'click', function() {
-			if ( ! $this.hasClass( 'lsvr-slide-list--animation-in-progress' ) ) {
-				slide( 'next' );
-			}
-		});
+      // Click on next
+      $nextBtn.on('click', function() {
+          if (!$this.hasClass('lsvr-slide-list--animation-in-progress')) {
+              slide('next');
+          }
+      });
 
-		// Click on prev
-		$prevBtn.on( 'click', function() {
-			if ( ! $this.hasClass( 'lsvr-slide-list--animation-in-progress' ) ) {
-				slide( 'prev' );
-			}
-		});
+      // Click on prev
+      $prevBtn.on('click', function() {
+          if (!$this.hasClass('lsvr-slide-list--animation-in-progress')) {
+              slide('prev');
+          }
+      });
 
-		// Autoplay function
-		var autoplayTimeout;
-		function startAutoplay( delay ) {
-			autoplayTimeout = setTimeout( function() {
-				slide( 'next' );
-				startAutoplay( delay );
-			}, delay * 1000 );
-		}
+      // Autoplay function
+      var autoplayTimeout;
+      function startAutoplay(delay) {
+          autoplayTimeout = setTimeout(function() {
+              slide('next');
+              startAutoplay(delay);
+          }, delay * 1000);
+      }
 
-		// Set autoplay
-		if ( autoplay > 0 ) {
+      // Set autoplay
+      if (autoplay > 0) {
+          // Initial start
+          startAutoplay(autoplay);
 
-			// Initial start
-			startAutoplay( autoplay );
+          // Pause on hover
+          $this.on('mouseenter', function() {
+              clearTimeout(autoplayTimeout);
+          });
 
-			// Pause on hover
-			$this.on( 'mouseenter', function() {
-				clearTimeout( autoplayTimeout );
-			});
+          // Resume on leave
+          $this.on('mouseleave', function() {
+              startAutoplay(autoplay);
+          });
+      }
 
-			// Resume oon leave
-			$this.on( 'mouseleave', function() {
-				startAutoplay( autoplay );
-			});
+  });
 
-		}
-
-	});
 
 	/* -------------------------------------------------------------------------
 		LSVR TABS
@@ -1038,60 +1037,3 @@ $(document).ready( function() {
 	LSVR STYLE SWITCHER
 
 ----------------------------------------------------------------------------- */
-
-(function($){ "use strict";
-$(document).ready( function() {
-
-	var colorSchemes = [ 'default', 'mavericks', 'red-sunset', 'lavender' ],
-		path = 'assets/css/color-schemes/';
-
-	// Prepare HTML
-	var html = '<div class="lsvr-style-switcher"><div class="lsvr-style-switcher__inner">';
-	html += '<button type="button" class="lsvr-style-switcher__toggle"><span class="lsvr-style-switcher__toggle-icon" aria-hidden="true"></span></button>';
-	html += '<div class="lsvr-style-switcher__content">';
-	html += '<ul class="lsvr-style-switcher__color-scheme-list">';
-	for ( var i = 0; i < colorSchemes.length; i++ ) {
-		html += '<li class="lsvr-style-switcher__color-scheme-item">';
-		html += '<button type="button" class="lsvr-style-switcher__color-scheme-btn lsvr-style-switcher__color-scheme-btn--' + colorSchemes[ i ] + '" data-color-scheme="' + colorSchemes[ i ] + '"></button></li>';
-	}
-	html += '</ul></div></div></div>';
-	$( 'body' ).append( html );
-
-	// Set vars
-	var $this = $( '.lsvr-style-switcher' ),
-		$toggle = $this.find( '.lsvr-style-switcher__toggle' ),
-		$colorSchemeItems = $( '.lsvr-style-switcher__color-scheme-item' );
-
-	// Toggle switcher
-	$toggle.on( 'click', function() {
-		$this.toggleClass( 'lsvr-style-switcher--active' );
-	});
-
-	// Set default active
-	$colorSchemeItems.first().addClass( 'lsvr-style-switcher__color-scheme-item--active' );
-
-	// Switch schemes
-	$( '.lsvr-style-switcher__color-scheme-btn' ).each( function() {
-		$(this).on( 'click', function() {
-
-			if ( ! $(this).parent().hasClass( 'lsvr-style-switcher__color-scheme-item--active' ) ) {
-
-				// Load CSS
-				if ( $( 'head #lsvr-style-switcher-color-scheme-css' ).length < 1 ) {
-					$( 'head' ).append( '<link id="lsvr-style-switcher-color-scheme-css" rel="stylesheet" type="text/css" href="' + path + $(this).data( 'color-scheme' ) + '.css">' );
-				}
-				else {
-					$( '#lsvr-style-switcher-color-scheme-css' ).attr( 'href', path + $(this).data( 'color-scheme' ) + '.css' );
-				}
-
-				// Set active
-				$colorSchemeItems.filter( '.lsvr-style-switcher__color-scheme-item--active' ).removeClass( 'lsvr-style-switcher__color-scheme-item--active' );
-				$(this).parent().addClass( 'lsvr-style-switcher__color-scheme-item--active' );
-
-			}
-
-		});
-	});
-
-});
-})(jQuery);

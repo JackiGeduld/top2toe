@@ -57,7 +57,7 @@
                                        <span class="lsvr-feature__icon icon-map-marker" aria-hidden="true"></span>
                                        <h3 class="lsvr-feature__title">Our HQ</h3>
                                        <div class="lsvr-feature__text">
-                                          <p>9015 Sunset Boulevard<br>Ca 90069</p>
+                                          <p>Shop 10D Welgemoed Plaza,<br>Bakker St, Welgemoed, 7530</p>
                                        </div>
                                     </div>
                                  </div>
@@ -72,9 +72,10 @@
                                        <span class="lsvr-feature__icon icon-clock-o" aria-hidden="true"></span>
                                        <h3 class="lsvr-feature__title">Opening Hours</h3>
                                        <div class="lsvr-feature__text">
-                                          <p>Mo. – Fr.: 10am – 4pm<br>
-                                             Sa.: 9am – 2pm<br>
-                                             Su: Closed
+                                          <p>Tue. – Fr.: 8am – 5pm<br>
+                                             Sa.: 8am – 2pm<br>
+                                             Su: Closed<br>
+                                             Mo: Closed
                                           </p>
                                        </div>
                                     </div>
@@ -105,7 +106,7 @@
                            <hr class="lsvr-separator" aria-hidden="true">
                            <!-- LSVR SEPARATOR : end -->
                            <h3>Make An Appointment</h3>
-                           <p>This form uses a dummy email address. If you want to ask about the template, please use the <a href="https://themeforest.net/item/beautyspot-html-template-for-beauty-salons/7734629/comments" target="_blank">comments section</a> on item description page.</p>
+                           <p>Book an appointment choosing our <a href="{{route('services')}}" target="_blank">services.</a> We will do our best to accomodate you!</p>
                            <!-- FORM : begin -->
                            <form class="lsvr-form lsvr-form--contact lsvr-form--ajax" action="https://demo.lsvr.sk/html/beautyspot/php/contact-form.php" method="post">
                               <input type="hidden" name="contact-form" value="true">

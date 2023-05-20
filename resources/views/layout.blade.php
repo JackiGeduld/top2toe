@@ -99,6 +99,18 @@ input, select, textarea {
 
     background-color: var(--secondary-color);
 }
+img {
+    border-radius: 10px
+  }
+	.service-post-archive .post__permalink-link {
+		box-shadow: 0 1px 0 0 var(--secondary-color);
+}
+.service-post-archive .post__permalink-link:active {
+		box-shadow: 0 1px 0 0 var(--secondary-color);
+}
+a:hover {
+		border-color: var(--secondary-color);
+}
 </style>
 @yield('styles')
 	</head>
@@ -284,7 +296,7 @@ input, select, textarea {
 								<li class="header-menu__item">
 
 									<span class="header-menu__item-link-wrapper">
-										<a href="contact.html" class="header-menu__item-link">Contact</a>
+										<a href="{{route('appointment.form')}}" class="header-menu__item-link">Contact</a>
 									</span>
 
 								</li>
@@ -446,7 +458,7 @@ input, select, textarea {
 
 												<!-- SOCIAL ITEM : begin -->
 												<li class="header-social__item header-social__item--facebook">
-													<a class="header-social__item-link" href="#facebook" target="_blank" title="Facebook">
+													<a class="header-social__item-link" href="https://www.facebook.com/Top2ToeWelgemoed/" target="_blank" title="Facebook">
 														<span class="header-social__icon icon-facebook" aria-hidden="true"></span>
 													</a>
 												</li>
@@ -609,8 +621,8 @@ input, select, textarea {
 
 		<!-- SCRIPTS : begin -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    		<script src="{{ asset('assets/css/third-party-scripts.min.js') }}" type="text/javascript"></script>
-    		<script src="{{ asset('assets/css/scripts.js') }}" type="text/javascript"></script>
+    		<script src="{{ asset('assets/js/third-party-scripts.min.js') }}" type="text/javascript"></script>
+    		<script src="{{ asset('assets/js/scripts.js') }}" type="text/javascript"></script>
 		<!-- SCRIPTS : end -->
 
 	</body>

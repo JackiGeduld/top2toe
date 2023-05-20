@@ -2,7 +2,17 @@
 @section('title', 'Services | Top2Toe - Unisex Salon')
 @section('content')
 @section('styles')
-
+<style>
+img {
+    border-radius: 10px
+  }
+  .service-post-archive .post__permalink-link {
+    box-shadow: 0 1px 0 0 var(--secondary-color);
+}
+.service-post-archive .post__permalink-link:active {
+    box-shadow: 0 1px 0 0 var(--secondary-color);
+}
+</style>
 @endsection
 <div id="core">
   <div class="core__inner">
@@ -46,8 +56,8 @@
 
                           <!-- POST THUMB : begin -->
                           <p class="post__thumbnail">
-                            <a href="service-single.html" class="post__thumbnail-link">
-                              <img src="  {{ asset('assets/images/service_01.jpg') }}" class="post__thumbnail-img" alt="Cosmetics">
+                            <a href="{{ route('services_individual', ['slug' => 'cosmetics']) }}" class="post__thumbnail-link">
+                              <img src="{{ asset('assets/images/service_01.jpg') }}" class="post__thumbnail-img" alt="Cosmetics">
                             </a>
                           </p>
                           <!-- POST THUMB : end -->
@@ -70,7 +80,7 @@
                           <div class="post__content">
                             <p>Cosmetics are substances or products used to enhance or alter the appearance of the face or fragrance and texture of the body.</p>
                             <p class="post__permalink">
-                              <a href="service-single.html" class="post__permalink-link">More Info</a>
+                              <a href="{{ route('services_individual', ['slug' => 'cosmetics']) }}" class="post__permalink-link">More Info</a>
                             </p>
                           </div>
                           <!-- POST CONTENT : end -->
