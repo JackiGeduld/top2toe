@@ -91,7 +91,7 @@
                                        <span class="lsvr-feature__icon icon-phone" aria-hidden="true"></span>
                                        <h3 class="lsvr-feature__title">Get In Touch</h3>
                                        <div class="lsvr-feature__text">
-                                          <p>(123) 456 789<br>
+                                          <p>+27 21 913 8243<br>
                                              example@example.com
                                           </p>
                                        </div>
@@ -105,12 +105,12 @@
                            <!-- LSVR SEPARATOR : begin -->
                            <hr class="lsvr-separator" aria-hidden="true">
                            <!-- LSVR SEPARATOR : end -->
-                           <h3>Make An Appointment</h3>
-                           <p>Book an appointment choosing our <a href="{{route('services')}}" target="_blank">services.</a> We will do our best to accomodate you!</p>
+                           <h3 class="main">Make An Appointment</h3>
+                           <p class="second">Book an appointment choosing our <a href="{{route('services')}}" target="_blank">services.</a> We will do our best to accomodate you!</p>
                            <!-- FORM : begin -->
-                           <form class="lsvr-form lsvr-form--contact lsvr-form--ajax" action="https://demo.lsvr.sk/html/beautyspot/php/contact-form.php" method="post">
-                              <input type="hidden" name="contact-form" value="true">
-                              <input class="lsvr-form__field-input-email" type="text" name="form-email"><!-- This is a honeypot field, please remove this comment -->
+
+                           <form class="lsvr-form lsvr-form--contact lsvr-form--ajax" action="{{ route('appointment.submit') }}" method="post">
+                             @csrf
                               <!-- VALIDATION ERROR MESSAGE : begin -->
                               <div class="lsvr-form__message lsvr-form__message--validation-error lsvr-alert-message lsvr-alert-message--warning">
                                  <span class="lsvr-alert-message__icon" aria-hidden="true"></span>
@@ -124,28 +124,25 @@
                               </div>
                               <!-- CONNECTION ERROR MESSAGE : begin -->
                               <!-- SUCCESS MESSAGE : begin -->
-                              <div class="lsvr-form__message lsvr-form__message--success lsvr-alert-message lsvr-alert-message--success">
-                                 <span class="lsvr-alert-message__icon" aria-hidden="true"></span>
-                                 <p>Message sent successfully!</p>
-                              </div>
+
                               <!-- SUCCESS MESSAGE : begin -->
                               <!-- GRID : begin -->
                               <div class="lsvr-grid lsvr-grid--2-cols lsvr-grid--sm-1-cols">
                                  <!-- GRID COL : begin -->
                                  <div class="lsvr-grid__col">
                                     <p class="lsvr-form__field">
-                                       <label class="lsvr-form__field-label" for="contact-name">Your Name*</label>
+                                       <label class="lsvr-form__field-label" for="name">Your Name*</label>
                                        <input class="lsvr-form__field-input lsvr-form__field-input--text lsvr-form__field-input--required"
-                                          type="text" name="contact-name" id="contact-name">
+                                          type="text" name="name" id="name">
                                     </p>
                                  </div>
                                  <!-- GRID COL : end -->
                                  <!-- GRID COL : begin -->
                                  <div class="lsvr-grid__col">
                                     <p class="lsvr-form__field">
-                                       <label class="lsvr-form__field-label" for="contact-email">Your Email*</label>
+                                       <label class="lsvr-form__field-label" for="email">Your Email*</label>
                                        <input class="lsvr-form__field-input lsvr-form__field-input--text lsvr-form__field-input--email lsvr-form__field-input--required"
-                                          type="text" name="contact-email" id="contact-email">
+                                          type="text" name="email" id="email">
                                     </p>
                                  </div>
                                  <!-- GRID COL : end -->
@@ -156,18 +153,18 @@
                                  <!-- GRID COL : begin -->
                                  <div class="lsvr-grid__col">
                                     <p class="lsvr-form__field">
-                                       <label class="lsvr-form__field-label" for="contact-phone">Your Phone</label>
+                                       <label class="lsvr-form__field-label" for="phone">Your Phone</label>
                                        <input class="lsvr-form__field-input lsvr-form__field-input--text"
-                                          type="text" name="contact-phone" id="contact-phone">
+                                          type="text" name="phone" id="phone">
                                     </p>
                                  </div>
                                  <!-- GRID COL : end -->
                                  <!-- GRID COL : begin -->
                                  <div class="lsvr-grid__col">
                                     <p class="lsvr-form__field">
-                                       <label class="lsvr-form__field-label" for="contact-subject">Subject</label>
+                                       <label class="lsvr-form__field-label" for="subject">Subject</label>
                                        <input class="lsvr-form__field-input lsvr-form__field-input--text"
-                                          type="text" name="contact-subject" id="contact-subject">
+                                          type="text" name="subject" id="subject">
                                     </p>
                                  </div>
                                  <!-- GRID COL : end -->
@@ -180,9 +177,9 @@
                                  <!-- GRID COL : begin -->
                                  <div class="lsvr-grid__col">
                                     <p>
-                                       <label for="contact-reservation-date">Preferred Date</label>
-                                       <span class="wpcf7-form-control-wrap" data-name="contact-reservation-date">
-                                       <input type="date" name="contact-reservation-date" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date" id="contact-reservation-date" aria-invalid="false" />
+                                       <label for="reservation_date">Preferred Date</label>
+                                       <span class="wpcf7-form-control-wrap" data-name="reservation_date">
+                                       <input type="date" name="reservation_date" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date" id="contact-reservation-date" aria-invalid="false" />
                                        </span>
                                     </p>
                                  </div>
@@ -190,9 +187,9 @@
                                  <!-- GRID COL : begin -->
                                  <div class="lsvr-grid__col">
                                     <p>
-                                       <label for="contact-reservation-time">Preferred Time</label>
-                                       <span class="wpcf7-form-control-wrap" data-name="contact-reservation-time">
-                                          <select name="contact-reservation-time" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
+                                       <label for="reservation_time">Preferred Time</label>
+                                       <span class="wpcf7-form-control-wrap" data-name="reservation_time">
+                                          <select name="reservation_time" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
                                              <option value="9:00">9:00</option>
                                              <option value="9:30">9:30</option>
                                              <option value="10:00">10:00</option>
@@ -206,6 +203,8 @@
                                              <option value="14:00">14:00</option>
                                              <option value="14:30">14:30</option>
                                              <option value="15:00">15:00</option>
+                                             <option value="16:00">16:00</option>
+                                             <option value="17:00">17:00</option>
                                           </select>
                                        </span>
                                     </p>
@@ -214,13 +213,54 @@
                               </div>
                               <!-- GRID : end -->
                               <p>
-                                 <label for="contact-services">What Services Are You Interested In</label><span class="wpcf7-form-control-wrap" data-name="contact-services"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first"><label><input type="checkbox" name="contact-services[]" value="Facials"><span class="wpcf7-list-item-label">Facials</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Eyebrow &amp; Eyelashes"><span class="wpcf7-list-item-label">Eyebrow &amp; Eyelashes</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Wash"><span class="wpcf7-list-item-label">Wash</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Cut &amp; Finish"><span class="wpcf7-list-item-label">Cut &amp; Finish</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="contact-services[]" value="Blow Dries"><span class="wpcf7-list-item-label">Blow Dries</span></label></span><span class="wpcf7-list-item last"><label><input type="checkbox" name="contact-services[]" value="Hair Colouring"><span class="wpcf7-list-item-label">Hair Colouring</span></label></span></span></span>
+                                <label for="services">What Services Are You Interested In</label>
+    <span class="wpcf7-form-control-wrap" data-name="services">
+      <span class="wpcf7-form-control wpcf7-checkbox">
+        <span class="wpcf7-list-item first">
+          <label>
+            <input type="checkbox" name="services[]" value="Facials">
+            <span class="wpcf7-list-item-label">Facials</span>
+          </label>
+        </span>
+        <span class="wpcf7-list-item">
+          <label>
+            <input type="checkbox" name="services[]" value="Eyebrow &amp; Eyelashes">
+            <span class="wpcf7-list-item-label">Eyebrow &amp; Eyelashes</span>
+          </label>
+        </span>
+        <span class="wpcf7-list-item">
+          <label>
+            <input type="checkbox" name="services[]" value="Wash">
+            <span class="wpcf7-list-item-label">Wash</span>
+          </label>
+        </span>
+        <span class="wpcf7-list-item">
+          <label>
+            <input type="checkbox" name="services[]" value="Cut &amp; Finish">
+            <span class="wpcf7-list-item-label">Cut &amp; Finish</span>
+          </label>
+        </span>
+        <span class="wpcf7-list-item">
+          <label>
+            <input type="checkbox" name="services[]" value="Blow Dries">
+            <span class="wpcf7-list-item-label">Blow Dries</span>
+          </label>
+        </span>
+        <span class="wpcf7-list-item last">
+          <label>
+            <input type="checkbox" name="services[]" value="Hair Colouring">
+            <span class="wpcf7-list-item-label">Hair Colouring</span>
+          </label>
+        </span>
+      </span>
+    </span>
+
                               </p>
                               <!-- FORM MESSAGE : begin -->
                               <p class="lsvr-form__field">
-                                 <label class="lsvr-form__field-label" for="contact-message">Message*</label>
+                                 <label class="lsvr-form__field-label" for="message">Message*</label>
                                  <textarea class="lsvr-form__field-input lsvr-form__field-input--textarea lsvr-form__field-input--required"
-                                    name="contact-message" id="contact-message" cols="40" rows="10"></textarea>
+                                    name="message" id="message" cols="40" rows="10"></textarea>
                               </p>
                               <!-- FORM MESSAGE : end -->
                               <!-- FORM SUBMIT : begin -->

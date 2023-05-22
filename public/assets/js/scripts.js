@@ -508,6 +508,7 @@ $(document).ready( function() {
 						type: 'post',
 	            		dataType: 'json',
 						url: $form.attr( 'action' ),
+
 						data: $form.serialize(),
 						success: function( response ) {
 
@@ -530,16 +531,21 @@ $(document).ready( function() {
 
 							}
 
-							// Success
-							else if ( response.hasOwnProperty( 'type' ) && 'success' === response.type && response.hasOwnProperty( 'message' ) ) {
+              else if (response.hasOwnProperty('type') && response.type === 'success' && response.hasOwnProperty('message')) {
+                // Update the content of the <h3> element
+ $('.main').text('Appointment Submitted!');
 
-								$successMessage.html( '<p>' + response.message + '</p>' );
-								$successMessage.slideDown( 200 );
+ // Update the content of the <p> element
+ $('.second').html('Thank you for submitting your appointment. Our team will contact you shortly.');
 
-								// Reset all fields
-								$form.find( 'input, textarea' ).val( '' );
 
-							}
+
+        // Reset all fields
+        $form.find('input, textarea').val('');
+        $('.lsvr-form--ajax').remove();
+
+    }
+
 
 							// Unable to parse
 							else {

@@ -173,7 +173,7 @@ a:hover {
 									</div>
 
 									<p class="header-tagline">
-										Together We Stand Up Again
+										Where Beauty Meets Perfection
 									</p>
 
 								</div>
@@ -199,17 +199,7 @@ a:hover {
 										<span class="header-menu__submenu-toggle-icon" aria-hidden="true"></span>
 									</button>
 
-									<ul class="header-menu__submenu">
 
-										<li class="header-menu__item header-menu__item--current">
-											<a href="index.html" class="header-menu__item-link" role="menuitem">Home 1</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="index-2.html" class="header-menu__item-link" role="menuitem">Home 2</a>
-										</li>
-
-									</ul>
 
 								</li>
 								<!-- MENU ITEM : end -->

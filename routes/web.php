@@ -26,3 +26,4 @@ Route::get('/services/{slug}', [ServiceController::class, 'service_individual'])
 Route::get('/contact', [AppointmentController::class, 'showAppointmentForm'])->name('appointment.form');
 Route::post('/contact', [AppointmentController::class, 'submitAppointmentForm'])->name('appointment.submit');
 Route::get('/contact/success', [AppointmentController::class, 'showSuccessPage'])->name('appointment.success');
+Route::post('/contact/submit', [AppointmentController::class, 'submitAppointmentForm'])->name('appointment.submit');

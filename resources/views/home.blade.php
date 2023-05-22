@@ -95,7 +95,7 @@
                                                   <div class="lsvr-container">
                                                     <div class="lsvr-slide-list__item-content-inner">
 
-                                                                    <h2 class="lsvr-slide-list__item-title">Hundreds of Happy Clients</h2>
+                                                                    <h2 class="lsvr-slide-list__item-title">15% of All Hair Products</h2>
 
                                                                     <div class="lsvr-slide-list__item-text">
                                                                       <p>
@@ -188,7 +188,7 @@
                                                               </div>
                                                               <!-- SERVICE ITEM DESCRIPTION : end -->
 
-                                                            <a href="service-single.html" class="lsvr-services__post-overlay-link">
+                                                            <a href="{{ route('services_individual', ['slug' => 'cosmetics']) }}" class="lsvr-services__post-overlay-link">
                                                                 <span class="screen-reader-text">More Info</span>
                                                             </a>
 
@@ -211,7 +211,7 @@
                                                                   <span class="lsvr-services__post-icon icon-hair-dryer" aria-hidden="true"></span>
 
                                                                   <h3 class="lsvr-services__post-title">
-                                                                    <a href="service-single.html" class="lsvr-services__post-title-link">Hairdressing</a>
+                                                                    <a href="{{ route('services_individual', ['slug' => 'cosmetics']) }}" class="lsvr-services__post-title-link">Hairdressing</a>
                                                                 </h3>
 
                                                                 </div>
@@ -249,7 +249,7 @@
                                                                   <span class="lsvr-services__post-icon icon-beard" aria-hidden="true"></span>
 
                                                                   <h3 class="lsvr-services__post-title">
-                                                                    <a href="service-single.html" class="lsvr-services__post-title-link">Barber</a>
+                                                                    <a href="{{ route('services_individual', ['slug' => 'cosmetics']) }}" class="lsvr-services__post-title-link">Barber</a>
                                                                 </h3>
 
                                                                 </div>

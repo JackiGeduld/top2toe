@@ -118,7 +118,7 @@
 
                               <!-- GALLERY IMAGE : begin -->
                               <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_01.jpg" class="post__image-link open-in-lightbox">
+                                <a href="{{ asset('assets/images/gallery_01.jpg') }}" class="post__image-link open-in-lightbox">
                                   <img src=" {{ asset('assets/images/gallery_01.jpg') }}" class="post__image" alt="Gallery image">
                                 </a>
                               </li>
@@ -126,7 +126,15 @@
 
                               <!-- GALLERY IMAGE : begin -->
                               <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_02.jpg" class="post__image-link open-in-lightbox">
+                                <a href="{{ asset('assets/images/gallery_02.jpg') }}" class="post__image-link open-in-lightbox">
+                                  <img src="{{ asset('assets/images/gallery_02.jpg') }}" class="post__image" alt="Gallery image">
+                                </a>
+                              </li>
+                              <!-- GALLERY IMAGE : end -->
+
+                              <!-- GALLERY IMAGE : begin -->
+                              <li class="post__image-item lsvr-grid__col">
+                                <a href="{{ asset('assets/images/gallery_03.jpg') }}" class="post__image-link open-in-lightbox">
                                   <img src="{{ asset('assets/images/gallery_03.jpg') }}" class="post__image" alt="Gallery image">
                                 </a>
                               </li>
@@ -134,15 +142,7 @@
 
                               <!-- GALLERY IMAGE : begin -->
                               <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_03.jpg" class="post__image-link open-in-lightbox">
-                                  <img src="{{ asset('assets/images/gallery_03.jpg') }}" class="post__image" alt="Gallery image">
-                                </a>
-                              </li>
-                              <!-- GALLERY IMAGE : end -->
-
-                              <!-- GALLERY IMAGE : begin -->
-                              <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_04.jpg" class="post__image-link open-in-lightbox">
+                                <a href="{{ asset('assets/images/gallery_04.jpg') }}" class="post__image-link open-in-lightbox">
                                   <img src="{{ asset('assets/images/gallery_04.jpg') }}" class="post__image" alt="Gallery image">
                                 </a>
                               </li>
@@ -150,7 +150,7 @@
 
                               <!-- GALLERY IMAGE : begin -->
                               <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_05.jpg" class="post__image-link open-in-lightbox">
+                                <a href="{{ asset('assets/images/gallery_05.jpg') }}" class="post__image-link open-in-lightbox">
                                   <img src="{{ asset('assets/images/gallery_05.jpg') }}" class="post__image" alt="Gallery image">
                                 </a>
                               </li>
@@ -158,7 +158,7 @@
 
                               <!-- GALLERY IMAGE : begin -->
                               <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_06.jpg" class="post__image-link open-in-lightbox">
+                                <a href="{{ asset('assets/images/gallery_06.jpg') }}" class="post__image-link open-in-lightbox">
                                   <img src="{{ asset('assets/images/gallery_06.jpg') }}" class="post__image" alt="Gallery image">
                                 </a>
                               </li>
@@ -166,7 +166,7 @@
 
                               <!-- GALLERY IMAGE : begin -->
                               <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_07.jpg" class="post__image-link open-in-lightbox">
+                                <a href="{{ asset('assets/images/gallery_07.jpg') }}" class="post__image-link open-in-lightbox">
                                   <img src="{{ asset('assets/images/gallery_07.jpg') }}" class="post__image" alt="Gallery image">
                                 </a>
                               </li>
@@ -174,7 +174,7 @@
 
                               <!-- GALLERY IMAGE : begin -->
                               <li class="post__image-item lsvr-grid__col">
-                                <a href="images/gallery_08.jpg" class="post__image-link open-in-lightbox">
+                                <a href="{{ asset('assets/images/gallery_08.jpg') }}" class="post__image-link open-in-lightbox">
                                   <img src="{{ asset('assets/images/gallery_08.jpg') }}" class="post__image" alt="Gallery image">
                                 </a>
                               </li>
