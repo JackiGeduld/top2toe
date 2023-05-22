@@ -25,11 +25,11 @@ class AppointmentController extends Controller
            'name' => 'required|string|max:255',
            'email' => 'required|email',
            'message' => 'required',
-           'subject' => 'string|max:255',
-           'reservation_date' => 'required|date_format:Y-m-d',
-           'reservation_time' => 'required|date_format:H:i',
-           'services' => 'array',
-           'services.*' => 'string',
+           'subject' => 'nullable|string|max:255',
+           'reservation_date' => 'nullable|date_format:Y-m-d',
+           'reservation_time' => ['required', 'regex:/^\d{1,2}:\d{2}$/'],
+           'services' => 'nullable|array',
+           'services.*' => 'nullable|string',
        ]);
      // Handle the form submission logic, such as sending an email
      // or storing the contact information in the database
@@ -42,9 +42,9 @@ class AppointmentController extends Controller
    $appointment->email = Str::of($request->input('email'))->trim();
    $appointment->message = Str::of($request->input('message'))->trim();
    $appointment->subject = Str::of($request->input('subject'))->trim();
-   $appointment->reservation_date = Str::of($request->input('reservation_date'))->trim();
    $appointment->reservation_time = Str::of($request->input('reservation_time'))->trim();
-   $appointment->selected_services = json_encode($selectedServices);
+   $appointment->reservation_date = $request->input('reservation_date') ? Str::of($request->input('reservation_date'))->trim() : null;
+   $appointment->services = json_encode($selectedServices);
     $appointment->updated_at = now();
 
 
