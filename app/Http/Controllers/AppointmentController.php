@@ -17,7 +17,7 @@ class AppointmentController extends Controller
  public function submitAppointmentForm(Request $request)
  {
 
-   $selectedServices = implode(', ', $request->input('services'));
+
 
 
    // Perform validation on the form fields
@@ -44,7 +44,7 @@ class AppointmentController extends Controller
    $appointment->subject = Str::of($request->input('subject'))->trim();
    $appointment->reservation_date = Str::of($request->input('reservation_date'))->trim();
    $appointment->reservation_time = Str::of($request->input('reservation_time'))->trim();
-   $appointment->services = json_encode($selectedServices);
+   $appointment->selected_services = json_encode($selectedServices);
     $appointment->updated_at = now();
 
 
