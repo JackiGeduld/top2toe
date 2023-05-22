@@ -533,10 +533,12 @@ $(document).ready( function() {
 
               else if (response.hasOwnProperty('type') && response.type === 'success' && response.hasOwnProperty('message')) {
                 // Update the content of the <h3> element
- $('.main').text('Appointment Submitted!');
+                $('.main').text('Appointment Submitted!');
+
+
 
  // Update the content of the <p> element
- $('.second').html('Thank you for submitting your appointment. Our team will contact you shortly.');
+ $('.second').html('Thank you for submitting your appointment. Our team will contact you shortly.').css('color', 'var(--secondary-color)');;
 
 
 
@@ -720,7 +722,7 @@ $(document).ready( function() {
       var $this = $(this),
           $slides = $this.find('.lsvr-slide-list__item'),
           $active = $slides.first(),
-          autoplay = $this.attr('data-autoplay') ? parseInt($this.attr('data-autoplay')) : 5,
+          autoplay = $this.attr('data-autoplay') ? parseInt($this.attr('data-autoplay')) : 6,
           $prevBtn = $this.find('.lsvr-slide-list__nav-button--prev'),
           $nextBtn = $this.find('.lsvr-slide-list__nav-button--next'),
           $next;

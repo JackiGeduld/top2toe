@@ -228,15 +228,15 @@ a:hover {
 									<ul class="header-menu__submenu">
 
 										<li class="header-menu__item">
-											<a href="product-archive.html" class="header-menu__item-link" role="menuitem">Products</a>
+											<a href="{{route('products')}}" class="header-menu__item-link" role="menuitem">Products</a>
 										</li>
 
 										<li class="header-menu__item">
-											<a href="product-cart.html" class="header-menu__item-link" role="menuitem">Cart</a>
+											<a href="{{route('cart')}}" class="header-menu__item-link" role="menuitem">Cart</a>
 										</li>
 
 										<li class="header-menu__item">
-											<a href="product-checkout.html" class="header-menu__item-link" role="menuitem">Checkout</a>
+											<a href="{{route('checkout')}}" class="header-menu__item-link" role="menuitem">Checkout</a>
 										</li>
 
 									</ul>
@@ -258,23 +258,25 @@ a:hover {
 									<ul class="header-menu__submenu">
 
 										<li class="header-menu__item">
-											<a href="blog-archive.html" class="header-menu__item-link" role="menuitem">Blog</a>
+ 										 <a href="{{route('team')}}" class="header-menu__item-link" role="menuitem">Our Team</a>
+ 									 </li>
+										<li class="header-menu__item">
+											<a href="{{route('blog')}}" class="header-menu__item-link" role="menuitem">Blog</a>
 										</li>
 
+<!--
 										<li class="header-menu__item">
 											<a href="gallery-archive.html" class="header-menu__item-link" role="menuitem">Galleries</a>
+										</li> -->
+
+
+
+										<li class="header-menu__item">
+											<a href="{{route('testimonials')}}" class="header-menu__item-link" role="menuitem">Testimonials</a>
 										</li>
 
 										<li class="header-menu__item">
-											<a href="person-archive.html" class="header-menu__item-link" role="menuitem">Our Team</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="testimonial-archive.html" class="header-menu__item-link" role="menuitem">Testimonials</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="faq-archive.html" class="header-menu__item-link" role="menuitem">FAQ</a>
+											<a href="{{route('faq')}}" class="header-menu__item-link" role="menuitem">FAQ</a>
 										</li>
 
 									</ul>
@@ -292,47 +294,8 @@ a:hover {
 								</li>
 								<!-- MENU ITEM : end -->
 
-								<!-- MENU ITEM : begin -->
-								<li class="header-menu__item header-menu__item--has-children">
 
-									<span class="header-menu__item-link-wrapper">
-										<a href="typography.html" class="header-menu__item-link">More</a>
-									</span>
 
-									<button type="button" class="header-menu__submenu-toggle" title="Expand submenu">
-										<span class="header-menu__submenu-toggle-icon" aria-hidden="true"></span>
-									</button>
-
-									<ul class="header-menu__submenu">
-
-										<li class="header-menu__item">
-											<a href="typography.html" class="header-menu__item-link" role="menuitem">Typography</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="elements.html" class="header-menu__item-link" role="menuitem">Elements</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="sidebar-left.html" class="header-menu__item-link" role="menuitem">Left Sidebar</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="sidebar-right.html" class="header-menu__item-link" role="menuitem">Right Sidebar</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="search-results.html" class="header-menu__item-link" role="menuitem">Search Results</a>
-										</li>
-
-										<li class="header-menu__item">
-											<a href="404.html" class="header-menu__item-link" role="menuitem">Error 404 Page</a>
-										</li>
-
-									</ul>
-
-								</li>
-								<!-- MENU ITEM : end -->
 
 							</ul>
 
@@ -407,9 +370,8 @@ a:hover {
 													<li class="header-contact__item header-contact__item--has-icon">
 														<span class="header-contact__item-icon icon-map-marker" aria-hidden="true"></span>
 														<p>
-															BeautySpot<br>
-															9015 Sunset Boulevard<br>
-															Ca 90069
+															Shop 10D Welgemoed Plaza, <br>
+Bakker St, Welgemoed, 7530<br>
 														</p>
 													</li>
 													<!-- CONTACT ITEM : end -->
@@ -418,11 +380,13 @@ a:hover {
 													<li class="header-contact__item header-contact__item--has-icon">
 														<span class="header-contact__item-icon icon-clock-o" aria-hidden="true"></span>
 														<dl>
-															<dt>Mo. - Fr.:</dt>
-															<dd>10am - 4pm</dd>
+															<dt>Tue. – Fr.:</dt>
+															<dd>8am – 5pm</dd>
 															<dt>Sa.:</dt>
-															<dd>9am - 2pm</dd>
+															<dd>8am – 2pm</dd>
 															<dt>Su.:</dt>
+															<dd>Closed</dd>
+															<dt>Mo.:</dt>
 															<dd>Closed</dd>
 														</dl>
 													</li>

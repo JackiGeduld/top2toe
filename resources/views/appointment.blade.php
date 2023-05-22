@@ -1,6 +1,5 @@
 @extends('layout')
 @section('title', ' Contact | Top2Toe - Unisex Salon')
-@section('content')
 @section('styles')
 <style>
    #contact-reservation-date{
@@ -18,6 +17,7 @@
    }
 </style>
 @endsection
+@section('content')
 <div id="core" class="core--narrow">
    <div class="core__inner">
       <!-- PAGE HEADER : begin -->

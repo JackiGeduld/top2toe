@@ -6,12 +6,7 @@
 img {
     border-radius: 10px
   }
-  .service-post-archive .post__permalink-link {
-    box-shadow: 0 1px 0 0 var(--secondary-color);
-}
-.service-post-archive .post__permalink-link:active {
-    box-shadow: 0 1px 0 0 var(--secondary-color);
-}
+
 </style>
 @endsection
 <div id="core">

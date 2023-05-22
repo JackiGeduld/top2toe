@@ -64,7 +64,7 @@
                                                   <div class="lsvr-container">
                                                     <div class="lsvr-slide-list__item-content-inner">
 
-                                                                    <h2 class="lsvr-slide-list__item-title">15% of All Nail Treatments</h2>
+                                                                    <h2 class="lsvr-slide-list__item-title"><span style="color: var(--secondary-color);">15%</span> of All <span style="color: var(--secondary-color);">Nail</span> Treatments</h2>
 
                                                                     <div class="lsvr-slide-list__item-text">
                                                                       <p>
@@ -74,7 +74,7 @@
                                                                     </div>
 
                                                                     <p class="lsvr-slide-list__item-button">
-                                                                        <a href="blog-archive.html" class="lsvr-button lsvr-slide-list__item-button-link">See Our Blog</a>
+                                                                        <a href="{{route('blog')}}" class="lsvr-button lsvr-slide-list__item-button-link">See Our Blog</a>
                                                                     </p>
 
                                                               </div>
@@ -95,7 +95,7 @@
                                                   <div class="lsvr-container">
                                                     <div class="lsvr-slide-list__item-content-inner">
 
-                                                                    <h2 class="lsvr-slide-list__item-title">15% of All Hair Products</h2>
+                                                                    <h2 class="lsvr-slide-list__item-title"><span style="color: var(--secondary-color);">20%</span> of All Hair Products</h2>
 
                                                                     <div class="lsvr-slide-list__item-text">
                                                                       <p>
@@ -431,7 +431,7 @@
 
                                             <!-- POST ITEM THUMB : begin -->
                                                         <p class="lsvr-posts__post-thumbnail">
-                                                            <a href="blog-single.html" class="lsvr-posts__post-thumbnail-link">
+                                                            <a href="{{route('blog')}}" class="lsvr-posts__post-thumbnail-link">
                                                                 <img src="{{ asset('assets/images/blog_01.jpg') }}" class="lsvr-posts__post-thumbnail-img" alt="A spa is a location where mineral-rich spring water">
                                                             </a>
                                                         </p>
@@ -441,7 +441,7 @@
                                                         <header class="lsvr-posts__post-header">
 
                                                           <h3 class="lsvr-posts__post-title">
-                                                              <a href="blog-single.html" class="lsvr-posts__post-title-link">A spa is a location where mineral-rich spring water</a>
+                                                              <a href="{{route('blog')}}l" class="lsvr-posts__post-title-link">A spa is a location where mineral-rich spring water</a>
                                                           </h3>
 
                                                           <p class="lsvr-posts__post-meta">
@@ -451,7 +451,7 @@
                                                                   </span>
 
                                                                   <span class="lsvr-posts__post-meta-categories">
-                                                                      in <a href="blog-archive.html" class="lsvr-posts__post-meta-link">Spa Treatments</a>
+                                                                      in <a href="{{route('blog')}}" class="lsvr-posts__post-meta-link">Spa Treatments</a>
                                                                   </span>
 
                                                             </p>
@@ -468,7 +468,7 @@
                                                         <!-- POST ITEM CONTENT : end -->
 
                                                       <p class="lsvr-posts__post-permalink">
-                                                         <a href="blog-single.html" class="lsvr-posts__post-permalink-link">Read More</a>
+                                                         <a href="{{route('blog')}}" class="lsvr-posts__post-permalink-link">Read More</a>
                                                       </p>
 
                                                   </div>
@@ -483,7 +483,7 @@
 
                                             <!-- POST ITEM THUMB : begin -->
                                                         <p class="lsvr-posts__post-thumbnail">
-                                                            <a href="blog-single.html" class="lsvr-posts__post-thumbnail-link">
+                                                            <a href="{{route('blog')}}" class="lsvr-posts__post-thumbnail-link">
                                                                 <img src="{{ asset('assets/images/blog_02.jpg') }}" class="lsvr-posts__post-thumbnail-img" alt="The main professionals that provide therapeutic">
                                                             </a>
                                                         </p>
@@ -493,7 +493,7 @@
                                                         <header class="lsvr-posts__post-header">
 
                                                           <h3 class="lsvr-posts__post-title">
-                                                              <a href="blog-single.html" class="lsvr-posts__post-title-link">The main professionals that provide therapeutic</a>
+                                                              <a href="{{route('blog')}}" class="lsvr-posts__post-title-link">The main professionals that provide therapeutic</a>
                                                           </h3>
 
                                                           <p class="lsvr-posts__post-meta">
@@ -503,7 +503,7 @@
                                                                   </span>
 
                                                                   <span class="lsvr-posts__post-meta-categories">
-                                                                      in <a href="blog-archive.html" class="lsvr-posts__post-meta-link">Spa Treatments</a>
+                                                                      in <a href="{{route('blog')}}" class="lsvr-posts__post-meta-link">Spa Treatments</a>
                                                                   </span>
 
                                                             </p>
@@ -512,7 +512,7 @@
                                                       <!-- POST ITEM HEADER : end -->
 
                                                       <p class="lsvr-posts__post-permalink">
-                                                         <a href="blog-single.html" class="lsvr-posts__post-permalink-link">Read More</a>
+                                                         <a href="{{route('blog')}}" class="lsvr-posts__post-permalink-link">Read More</a>
                                                       </p>
 
                                                   </div>
@@ -527,7 +527,7 @@
 
                                             <!-- POST ITEM THUMB : begin -->
                                                         <p class="lsvr-posts__post-thumbnail">
-                                                            <a href="blog-single.html" class="lsvr-posts__post-thumbnail-link">
+                                                            <a href="{{route('blog')}}" class="lsvr-posts__post-thumbnail-link">
                                                                 <img src="{{ asset('assets/images/blog_03.jpg') }}" class="lsvr-posts__post-thumbnail-img" alt="The dyeing of hair is an ancient art that involves">
                                                             </a>
                                                         </p>
@@ -537,7 +537,7 @@
                                                         <header class="lsvr-posts__post-header">
 
                                                           <h3 class="lsvr-posts__post-title">
-                                                              <a href="blog-single.html" class="lsvr-posts__post-title-link">The dyeing of hair is an ancient art that involves</a>
+                                                              <a href="{{route('blog')}}" class="lsvr-posts__post-title-link">The dyeing of hair is an ancient art that involves</a>
                                                           </h3>
 
                                                           <p class="lsvr-posts__post-meta">
@@ -547,7 +547,7 @@
                                                                   </span>
 
                                                                   <span class="lsvr-posts__post-meta-categories">
-                                                                      in <a href="blog-archive.html" class="lsvr-posts__post-meta-link">Hair Care</a>
+                                                                      in <a href="{{route('blog')}}" class="lsvr-posts__post-meta-link">Hair Care</a>
                                                                   </span>
 
                                                             </p>
@@ -556,7 +556,7 @@
                                                       <!-- POST ITEM HEADER : end -->
 
                                                       <p class="lsvr-posts__post-permalink">
-                                                         <a href="blog-single.html" class="lsvr-posts__post-permalink-link">Read More</a>
+                                                         <a href="{{route('blog')}}" class="lsvr-posts__post-permalink-link">Read More</a>
                                                       </p>
 
                                                   </div>
